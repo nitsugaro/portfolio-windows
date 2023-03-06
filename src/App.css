@@ -1,0 +1,32 @@
+:root {
+  --dark-windows: #0d0d0d;
+  --black-windows: #19191a;
+  --light-gray-windows: #525253;
+  --shine-gray-windows: #b6b5b5;
+  --gray-windows: #313131;
+  --blue-windows: #0279d8;
+  --red-windows: rgb(209, 34, 34);
+  --yellow-windows: #f0dd71;
+  --white: #fff;
+  --black: #000;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fullscreen-icon {
+  position: fixed;
+  opacity: 0.3;
+  width: 1.5rem;
+  bottom: 10px;
+  right: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 7;
+}
+
+.fullscreen-icon:hover {
+  opacity: 1;
+}

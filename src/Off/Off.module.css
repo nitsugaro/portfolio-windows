@@ -1,0 +1,45 @@
+.off-container {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  z-index: 10;
+}
+
+.message {
+  position: fixed;
+  font-size: 1.3rem;
+  letter-spacing: 0.4rem;
+  color: var(--white);
+  opacity: 0.5;
+  left: 15px;
+  bottom: 15px;
+  animation: message-opacity 2s ease infinite;
+}
+
+@keyframes message-opacity {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.fadeEnter {
+  opacity: 1;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+}
+
+/* Fade Exit Animation */
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transition: opacity 500ms;
+}

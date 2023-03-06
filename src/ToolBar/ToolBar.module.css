@@ -1,0 +1,15 @@
+:root {
+  --height-toolbar: 45px;
+}
+
+.toolbar-container {
+  width: 100%;
+  height: var(--height-toolbar);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--black-windows);
+}

@@ -1,0 +1,10 @@
+.date-container {
+  width: 11rem;
+  height: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  text-align: center;
+}

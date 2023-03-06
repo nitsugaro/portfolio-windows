@@ -1,0 +1,49 @@
+.window-navbar-container {
+  height: 30px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  top: 0px;
+  left: 0px;
+}
+
+.container-items-right {
+  display: flex;
+  height: 100%;
+}
+
+.container-item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.6rem;
+}
+
+.x-navbar {
+  height: 80%;
+}
+
+.container-item:hover {
+  background-color: var(--gray-windows);
+}
+
+.container-item:last-child:hover {
+  background-color: var(--red-windows);
+}
+
+.container-items-left {
+  display: flex;
+  align-items: center;
+}
+
+.item-left-title {
+  font-weight: 100;
+  color: var(--white);
+  margin-left: 0.3rem;
+}
+
+.folder-icon {
+  height: 80%;
+}

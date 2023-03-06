@@ -1,0 +1,42 @@
+.window-folder-container {
+  min-width: 200px;
+  min-height: 200px;
+  background-color: var(--gray-windows);
+  position: absolute;
+  resize: both;
+  overflow: auto;
+  z-index: 1;
+  border: 1px solid var(--light-gray-windows);
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: bottom center;
+  animation: appear-window 0.2s ease forwards;
+}
+
+@keyframes appear-window {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.minimized {
+  transform: scale(1);
+  opacity: 1;
+  animation: desappear-window 0.3s ease forwards;
+}
+
+@keyframes desappear-window {
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.selected {
+  z-index: 5;
+}
+
+.window-folder-container::-webkit-resizer {
+  display: none;
+}

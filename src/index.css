@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("./assets/SEGOEUI.TTF");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}

@@ -1,0 +1,9 @@
+.home-container {
+  position: relative;
+  height: calc(100vh - var(--height-toolbar));
+  text-align: center;
+  background: url("src/assets/window-10-background.jpg");
+  background-size: cover;
+
+  overflow: hidden;
+}

@@ -1,0 +1,140 @@
+.left-side-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-windows-svg {
+  height: 1.5rem;
+  fill: var(--white);
+  padding: 0 0.6rem;
+  transition: fill 0.3s ease;
+}
+
+.toolbar-windows-svg:hover {
+  fill: var(--blue-windows);
+}
+
+.toolbar-input-container {
+  width: 17.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(var(--height-toolbar) - 4px);
+  border: 2px solid var(--light-gray-windows);
+  background-color: var(--gray-windows);
+}
+
+.toolbar-search-icon {
+  height: 20px;
+  padding: 0 5px;
+  fill: var(--white);
+}
+
+.toolbar-input {
+  width: 300px;
+  height: 100%;
+  font-size: 0.9rem;
+  color: var(--white);
+  padding: 0 2px;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.toolbar-input::placeholder {
+  color: var(--shine-gray-windows);
+}
+
+/* ON-FOCUS */
+.toolbar-input-container-focus {
+  background-color: var(--white);
+}
+
+.toolbar-search-icon-focus {
+  fill: var(--black-windows);
+}
+
+.toolbar-input-focus {
+  color: var(--black-windows);
+}
+
+.container-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0.3rem;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.item {
+  max-width: 30px;
+  height: 30px;
+}
+
+.item-container:hover {
+  background-color: var(--gray-windows);
+}
+
+.item-active {
+  height: calc(100% - 1px);
+  border-bottom: 1px solid var(--yellow-windows);
+}
+
+.item-selected {
+  background-color: var(--gray-windows);
+}
+
+/* MENU */
+
+.menu-container {
+  min-width: 100px;
+  height: calc(4rem);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  box-shadow: 0 0 5px black;
+  border: 2px solid var(--dark-windows);
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  background-color: var(--black-windows);
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+
+.active {
+  transform: scaleY(1);
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.menu-option:hover {
+  background-color: var(--gray-windows);
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: var(--white);
+}
+
+.menu-label {
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: var(--white);
+}
