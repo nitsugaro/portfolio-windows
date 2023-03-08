@@ -1,12 +1,5 @@
 import s from "./LeftSideToolBar.module.css";
-import {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Menu from "../Menu/Menu";
 import { MyContext } from "../GlobalContext/GlobalContext";
 import Svg from "../SVG/Svg";
@@ -17,10 +10,10 @@ export default function LeftSideToolBar() {
   const [search, setSearch] = useState("");
   const { domTarget, lenguage } = useContext(MyContext).global;
   const {
-    foldersActive,
-    setFoldersActive,
-    folderSelected,
-    setFolderSelected,
+    windowsActive,
+    setWindowsActive,
+    windowSelected,
+    setWindowSelected,
     setGlobal,
     global,
   } = useContext(MyContext);
@@ -53,15 +46,18 @@ export default function LeftSideToolBar() {
       setOpen(false);
   }, [domTarget]);
 
-  const handleFoldersMinimized = useCallback((id) => {
-    setFoldersActive((prevFolders) =>
-      prevFolders.map((folder) => {
-        if (folder.id != id) return folder;
-        folder.minimized = false;
-        return folder;
-      })
-    );
-  }, []);
+  const handleFoldersMinimized = useCallback(
+    (id, isSelected) => {
+      setWindowsActive(
+        windowsActive.map((folder) => {
+          if (folder.id != id) return folder;
+          folder.minimized = isSelected;
+          return folder;
+        })
+      );
+    },
+    [windowsActive]
+  );
 
   return (
     <div className={s["left-side-container"]}>
@@ -128,15 +124,16 @@ export default function LeftSideToolBar() {
           <Svg className={s["item"]} icon="reddit" />
         </div>
 
-        {foldersActive.map(({ icon, id, minimized }) => (
+        {windowsActive.map(({ icon, id, minimized }) => (
           <div
             className={`${s["item-container"]} ${s["item-active"]} ${
-              folderSelected === id ? s["item-selected"] : ""
+              windowSelected === id ? s["item-selected"] : ""
             }`.trim()}
             key={id}
             onClick={() => {
-              minimized && handleFoldersMinimized(id);
-              setFolderSelected(id);
+              const isSelected = id === windowSelected && !minimized;
+              handleFoldersMinimized(id, isSelected);
+              setWindowSelected(isSelected ? null : id);
             }}
           >
             <Svg className={s["item"]} icon={icon} />

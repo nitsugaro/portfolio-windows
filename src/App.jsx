@@ -38,8 +38,8 @@ function App() {
             version="1.1"
             viewBox="0 0 14 14"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnssketch="http://www.bohemiancoding.com/sketch/ns"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             className={"fullscreen-icon"}
             onClick={handleFullscreen}
           >
@@ -48,10 +48,10 @@ function App() {
             <defs />
             <g
               fill="none"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               id="Page-1"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g
                 fill="#FFF"

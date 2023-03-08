@@ -7,11 +7,10 @@ export default function WindowNavBar({
   handleMousePressed,
   handleMouseUp,
   windowRef,
-  name,
-  icon,
-  id,
+  folder,
+  color,
 }) {
-  const { removeFolderActive, setFoldersActive } = useContext(MyContext);
+  const { removeWindowActive, setWindowsActive } = useContext(MyContext);
 
   const handleResizeWindow = useCallback(() => {
     if (!windowRef) return;
@@ -27,7 +26,7 @@ export default function WindowNavBar({
   }, [windowRef]);
 
   const handleFoldersMinimized = useCallback((id) => {
-    setFoldersActive((prevFolders) =>
+    setWindowsActive((prevFolders) =>
       prevFolders.map((folder) => {
         if (folder.id != id) return folder;
         folder.minimized = true;
@@ -38,31 +37,47 @@ export default function WindowNavBar({
 
   return (
     <div
-      className={s["window-navbar-container"]}
+      className={`${s["window-navbar-container"]} ${s["navbar-" + color]}`}
       onMouseDown={handleMousePressed}
       onMouseUp={handleMouseUp}
       onBlur={handleMouseUp}
       tabIndex={0}
     >
       <div className={s["container-items-left"]}>
-        <Svg icon={icon} className={s["folder-icon"]} />
-        <h4 className={s["item-left-title"]}>{name}</h4>
+        <Svg icon={folder.icon} className={s["folder-icon"]} />
+        <h4
+          className={`${s["item-left-title"]} ${s["item-left-title-" + color]}`}
+        >
+          {folder.name}
+        </h4>
       </div>
       <div className={s["container-items-right"]}>
         <div
-          className={s["container-item"]}
-          onClick={() => handleFoldersMinimized(id)}
+          className={`${s["container-item"]} ${s["container-item-" + color]}`}
+          onClick={() => handleFoldersMinimized(folder.id)}
         >
-          <Svg icon="line" className={s["x-navbar"]} />
-        </div>
-        <div className={s["container-item"]} onClick={handleResizeWindow}>
-          <Svg icon="square" className={s["x-navbar"]} />
+          <Svg
+            icon="line"
+            className={`${s["icon-navbar"]} ${s["icon-" + color]}`}
+          />
         </div>
         <div
-          className={s["container-item"]}
-          onClick={() => removeFolderActive(id)}
+          className={`${s["container-item"]} ${s["container-item-" + color]}`}
+          onClick={handleResizeWindow}
         >
-          <Svg icon="x" className={s["x-navbar"]} />
+          <Svg
+            icon="square"
+            className={`${s["icon-navbar"]} ${s["icon-" + color]}`}
+          />
+        </div>
+        <div
+          className={`${s["container-item"]} ${s["container-item-" + color]}`}
+          onClick={() => removeWindowActive(folder.id)}
+        >
+          <Svg
+            icon="x"
+            className={`${s["icon-navbar"]} ${s["icon-" + color]}`}
+          />
         </div>
       </div>
     </div>

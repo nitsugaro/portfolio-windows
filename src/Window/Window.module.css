@@ -1,10 +1,9 @@
 .window-folder-container {
   min-width: 200px;
   min-height: 200px;
-  background-color: var(--gray-windows);
   position: absolute;
   resize: both;
-  overflow: auto;
+  overflow: hidden;
   z-index: 1;
   border: 1px solid var(--light-gray-windows);
   transform: scale(0);

@@ -1,13 +1,18 @@
 import { useCallback, useContext, useRef, useState } from "react";
-import s from "./WindowFolder.module.css";
+import s from "./Window.module.css";
 import { MyContext } from "../GlobalContext/GlobalContext";
 import useMove from "../Hooks/useMove";
 import WindowNavBar from "./WindowNavBar/WindowNarBar";
-import imgMe from "../assets/perfil-me.jpg";
 
-export default function WindowFolder({ name, icon, id, homeRef, minimized }) {
+export default function Window({
+  folder,
+  homeRef,
+  minimized,
+  content,
+  colorNavbar,
+}) {
   const { width, height } = useContext(MyContext).homeBounds;
-  const { setFolderSelected, folderSelected } = useContext(MyContext);
+  const { setWindowSelected, windowSelected } = useContext(MyContext);
 
   const windowRef = useRef(null);
 
@@ -16,7 +21,11 @@ export default function WindowFolder({ name, icon, id, homeRef, minimized }) {
     top: height / 4 + "px",
   };
 
-  const { setMousePressed } = useMove(homeRef, windowRef, position);
+  const { setMousePressed, mousePressed } = useMove(
+    homeRef,
+    windowRef,
+    position
+  );
 
   const handleMousePressed = useCallback(() => setMousePressed(true), []);
   const handleMouseUp = useCallback(() => setMousePressed(false), []);
@@ -32,20 +41,19 @@ export default function WindowFolder({ name, icon, id, homeRef, minimized }) {
         ...position,
       }}
       className={`${s["window-folder-container"]} ${
-        folderSelected === id ? s.selected : ""
+        windowSelected === folder.id ? s.selected : ""
       } ${minimized ? s.minimized : ""}`.trim()}
       tabIndex={0}
-      onMouseDown={() => setFolderSelected(id)}
+      onMouseDown={() => setWindowSelected(folder.id)}
     >
       <WindowNavBar
         handleMousePressed={handleMousePressed}
         handleMouseUp={handleMouseUp}
         windowRef={windowRef.current}
-        name={name}
-        icon={icon}
-        id={id}
+        folder={folder}
+        color={colorNavbar}
       />
-      <img src={imgMe} style={{ height: "calc(100% - 30px)" }} alt="img-file" />
+      <div style={{ height: "calc(100% - 30px)" }}>{content}</div>
     </div>
   );
 }

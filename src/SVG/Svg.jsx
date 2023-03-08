@@ -1,5 +1,6 @@
 import filePDF from "../assets/file-pdf.png";
 import bloc from "../assets/bloc.png";
+import video from "../assets/video.png";
 
 export default function Svg({ icon, className }) {
   if (icon == "folder")
@@ -21,8 +22,8 @@ export default function Svg({ icon, className }) {
           y2="14.977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#eba600"></stop>
-          <stop offset="1" stop-color="#c28200"></stop>
+          <stop offset="0" stopColor="#eba600"></stop>
+          <stop offset="1" stopColor="#c28200"></stop>
         </linearGradient>
         <path
           fill="url(#WQEfvoQAcpQgQgyjQQ4Hqa_dINnkNb1FBl4_gr1)"
@@ -36,8 +37,8 @@ export default function Svg({ icon, className }) {
           y2="40.983"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#ffd869"></stop>
-          <stop offset="1" stop-color="#fec52b"></stop>
+          <stop offset="0" stopColor="#ffd869"></stop>
+          <stop offset="1" stopColor="#fec52b"></stop>
         </linearGradient>
         <path
           fill="url(#WQEfvoQAcpQgQgyjQQ4Hqb_dINnkNb1FBl4_gr2)"
@@ -75,19 +76,19 @@ export default function Svg({ icon, className }) {
         />
         <g filter="url(#filter2_di)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M976.603 871C978.972 865.339 980.618 859.301 981.427 853H42.5732C43.3819 859.301 45.0282 865.339 47.397 871H976.603Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
-          <path d="M982 816H42V834H982V816Z" fill="white" fill-opacity="0.01" />
+          <path d="M982 816H42V834H982V816Z" fill="white" fillOpacity="0.01" />
         </g>
         <g filter="url(#filter3_i)">
           <path
             d="M42 328C42 289.34 73.3401 258 112 258H912C950.66 258 982 289.34 982 328V844C982 882.66 950.66 914 912 914H112C73.3401 914 42 882.66 42 844V328Z"
             fill="white"
-            fill-opacity="0.02"
+            fillOpacity="0.02"
           />
         </g>
         <defs>
@@ -98,9 +99,9 @@ export default function Svg({ icon, className }) {
             width="980"
             height="830"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -131,9 +132,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="351.5"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -180,9 +181,9 @@ export default function Svg({ icon, className }) {
             width="970"
             height="85"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -227,9 +228,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="656"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -288,19 +289,19 @@ export default function Svg({ icon, className }) {
         />
         <g filter="url(#filter2_di)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M976.603 871C978.972 865.339 980.618 859.301 981.427 853H42.5732C43.3819 859.301 45.0282 865.339 47.397 871H976.603Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
-          <path d="M982 816H42V834H982V816Z" fill="white" fill-opacity="0.01" />
+          <path d="M982 816H42V834H982V816Z" fill="white" fillOpacity="0.01" />
         </g>
         <g filter="url(#filter3_i)">
           <path
             d="M42 328C42 289.34 73.3401 258 112 258H912C950.66 258 982 289.34 982 328V844C982 882.66 950.66 914 912 914H112C73.3401 914 42 882.66 42 844V328Z"
             fill="white"
-            fill-opacity="0.02"
+            fillOpacity="0.02"
           />
         </g>
         <defs>
@@ -311,9 +312,9 @@ export default function Svg({ icon, className }) {
             width="980"
             height="830"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -344,9 +345,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="351.5"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -393,9 +394,9 @@ export default function Svg({ icon, className }) {
             width="970"
             height="85"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -440,9 +441,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="656"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -565,19 +566,19 @@ export default function Svg({ icon, className }) {
         />
         <g filter="url(#filter2_di)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M976.603 871C978.972 865.339 980.618 859.301 981.427 853H42.5732C43.3819 859.301 45.0282 865.339 47.397 871H976.603Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
-          <path d="M982 816H42V834H982V816Z" fill="white" fill-opacity="0.01" />
+          <path d="M982 816H42V834H982V816Z" fill="white" fillOpacity="0.01" />
         </g>
         <g filter="url(#filter3_i)">
           <path
             d="M42 328C42 289.34 73.3401 258 112 258H912C950.66 258 982 289.34 982 328V844C982 882.66 950.66 914 912 914H112C73.3401 914 42 882.66 42 844V328Z"
             fill="white"
-            fill-opacity="0.02"
+            fillOpacity="0.02"
           />
         </g>
         <defs>
@@ -588,9 +589,9 @@ export default function Svg({ icon, className }) {
             width="980"
             height="830"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -621,9 +622,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="351.5"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -670,9 +671,9 @@ export default function Svg({ icon, className }) {
             width="970"
             height="85"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -717,9 +718,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="656"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -778,19 +779,19 @@ export default function Svg({ icon, className }) {
         />
         <g filter="url(#filter2_di)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M976.603 871C978.972 865.339 980.618 859.301 981.427 853H42.5732C43.3819 859.301 45.0282 865.339 47.397 871H976.603Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
-          <path d="M982 816H42V834H982V816Z" fill="white" fill-opacity="0.01" />
+          <path d="M982 816H42V834H982V816Z" fill="white" fillOpacity="0.01" />
         </g>
         <g filter="url(#filter3_i)">
           <path
             d="M42 328C42 289.34 73.3401 258 112 258H912C950.66 258 982 289.34 982 328V844C982 882.66 950.66 914 912 914H112C73.3401 914 42 882.66 42 844V328Z"
             fill="white"
-            fill-opacity="0.02"
+            fillOpacity="0.02"
           />
         </g>
         <defs>
@@ -801,9 +802,9 @@ export default function Svg({ icon, className }) {
             width="980"
             height="830"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -834,9 +835,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="351.5"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -883,9 +884,9 @@ export default function Svg({ icon, className }) {
             width="970"
             height="85"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -930,9 +931,9 @@ export default function Svg({ icon, className }) {
             width="940"
             height="656"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -974,14 +975,14 @@ export default function Svg({ icon, className }) {
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
         width="48px"
         height="48px"
         viewBox="0 0 438.549 438.549"
-        enable-background="new 0 0 438.549 438.549;"
-        xml:space="preserve"
+        enableBackground="new 0 0 438.549 438.549;"
+        xmlSpace="preserve"
         className={className}
       >
         <g>
@@ -1029,16 +1030,16 @@ export default function Svg({ icon, className }) {
   if (icon == "linkedin")
     return (
       <svg
-        enable-background="new 0 0 154.86 154.86"
+        enableBackground="new 0 0 154.86 154.86"
         id="Layer_1"
         overflow="visible"
         version="1.1"
         viewBox="0 0 154.86 154.86"
         width="48px"
         height="48px"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="icon">
@@ -1057,10 +1058,12 @@ export default function Svg({ icon, className }) {
         id="Flat"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 256 256"
-        fill="white"
         className={className}
       >
-        <path d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z" />
+        <path
+          strokeWidth={5}
+          d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z"
+        />
       </svg>
     );
 
@@ -1098,16 +1101,16 @@ export default function Svg({ icon, className }) {
   if (icon == "whatsapp")
     return (
       <svg
-        enable-background="new 0 0 157.216 157.216"
+        enableBackground="new 0 0 157.216 157.216"
         id="Layer_1"
         overflow="visible"
         version="1.1"
         viewBox="0 0 157.216 157.216"
         width="48px"
         height="48px"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="icon_2_">
@@ -1128,9 +1131,9 @@ export default function Svg({ icon, className }) {
         enableBackground="new 0 0 512 512"
         version="1.1"
         viewBox="0 0 512 512"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="_x31_12-gmail_x2C__email_x2C__mail">
@@ -1163,16 +1166,16 @@ export default function Svg({ icon, className }) {
   if (icon == "discord")
     return (
       <svg
-        enable-background="new 0 0 157.728 157.731"
+        enableBackground="new 0 0 157.728 157.731"
         id="Layer_1"
         overflow="visible"
         version="1.1"
         viewBox="0 0 157.728 157.731"
         width="48px"
         height="48px"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="icon_2_">
@@ -1191,16 +1194,16 @@ export default function Svg({ icon, className }) {
   if (icon == "skype")
     return (
       <svg
-        enable-background="new 0 0 155.95 155.95"
+        enableBackground="new 0 0 155.95 155.95"
         id="Layer_1"
         overflow="visible"
         version="1.1"
         viewBox="0 0 155.95 155.95"
         width="48px"
         height="48px"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="icon">
@@ -1219,16 +1222,16 @@ export default function Svg({ icon, className }) {
   if (icon == "reddit")
     return (
       <svg
-        enable-background="new 0 0 154.667 154.671"
+        enableBackground="new 0 0 154.667 154.671"
         id="Layer_1"
         overflow="visible"
         version="1.1"
         viewBox="0 0 154.667 154.671"
         height="48px"
         width="48px"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         className={className}
       >
         <g id="icon_2_">
@@ -1379,7 +1382,127 @@ export default function Svg({ icon, className }) {
         src={bloc}
         alt="bloc-icon"
         height="48px"
-        style={{ padding: "0 .1rem" }}
+        width="48px"
+        className={className}
+        draggable={false}
+      />
+    );
+
+  if (icon == "chrome")
+    return (
+      <svg
+        data-name="Layer 1"
+        height="48px"
+        id="Layer_1"
+        viewBox="0 0 32 32"
+        width="48px"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+      >
+        <path
+          d="M4.7434,22.505A12.9769,12.9769,0,0,0,14.88,28.949l5.8848-10.1927L16,16.0058,11.2385,18.755l-1.5875-2.75L8.4885,13.9919,5.3553,8.5649A12.9894,12.9894,0,0,0,4.7434,22.505Z"
+          fill="#00ac47"
+        />
+        <path
+          d="M16,3.0072A12.9769,12.9769,0,0,0,5.3507,8.5636l5.8848,10.1927L16,16.0057V10.5072H27.766A12.99,12.99,0,0,0,16,3.0072Z"
+          fill="#ea4435"
+        />
+        <path
+          d="M27.2557,22.505a12.9772,12.9772,0,0,0,.5124-12H15.9986v5.5011l4.7619,2.7492-1.5875,2.75-1.1625,2.0135-3.1333,5.4269A12.99,12.99,0,0,0,27.2557,22.505Z"
+          fill="#ffba00"
+        />
+        <circle cx="15.9995" cy="16.0072" fill="#fff" r="5.5" />
+        <circle cx="15.9995" cy="16.0072" fill="#4285f4" r="4.25" />
+      </svg>
+    );
+
+  if (icon == "arrow-left")
+    return (
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlnsX="&ns_extend;"
+        xmlnsI="&ns_ai;"
+        xmlnsGraph="&ns_graphs;"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 96 96"
+        enableBackground="new 0 0 96 96"
+        xmlSpace="preserve"
+        width="48px"
+        heihgt="48px"
+        className={className}
+      >
+        <switch>
+          <foreignObject
+            requiredExtensions="&ns_ai;"
+            x="0"
+            y="0"
+            width="1"
+            height="1"
+          >
+            <i:pgfRef xlinkHref="#adobe_illustrator_pgf"></i:pgfRef>
+          </foreignObject>
+          <g i:extraneous="self">
+            <path
+              d="M83.999,43.999H21.656l21.172-21.172c1.562-1.562,1.561-4.094,0-5.657c-1.562-1.562-4.094-1.562-5.657,0l-28,28
+			c-1.562,1.562-1.562,4.095-0.001,5.656l28,28c0.781,0.781,1.805,1.172,2.829,1.172c1.023,0,2.047-0.391,2.829-1.173
+			c1.562-1.561,1.561-4.094,0-5.655L21.655,51.999h62.344c2.209,0,4.001-1.792,4-4C87.999,45.79,86.208,43.999,83.999,43.999z"
+            />
+          </g>
+        </switch>
+        <i:pgf id="adobe_illustrator_pgf"></i:pgf>
+      </svg>
+    );
+
+  if (icon == "arrow-right")
+    return (
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlnsX="&ns_extend;"
+        xmlnsI="&ns_ai;"
+        xmlnsGraph="&ns_graphs;"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 96 96"
+        enableBackground="new 0 0 96 96"
+        xmlSpace="preserve"
+        width="48px"
+        height="48px"
+        className={className}
+      >
+        <switch>
+          <foreignObject
+            requiredExtensions="&ns_ai;"
+            x="0"
+            y="0"
+            width="1"
+            height="1"
+          >
+            <i:pgfRef xlink:href="#adobe_illustrator_pgf"></i:pgfRef>
+          </foreignObject>
+          <g i:extraneous="self">
+            <path
+              d="M12,52h62.344L53.172,73.172c-1.562,1.562-1.562,4.094,0,5.656c1.562,1.562,4.095,1.562,5.657,0l28-28
+			c1.562-1.562,1.562-4.095,0-5.656l-28-28C58.048,16.391,57.024,16,56,16c-1.023,0-2.047,0.391-2.828,1.172
+			c-1.562,1.562-1.562,4.095,0,5.656L74.344,44H12c-2.209,0-4,1.791-4,4S9.791,52,12,52z"
+            />
+          </g>
+        </switch>
+        <i:pgf id="adobe_illustrator_pgf"></i:pgf>
+      </svg>
+    );
+
+  if (icon == "video")
+    return (
+      <img
+        src={video}
+        alt="video-icon"
         className={className}
         draggable={false}
       />

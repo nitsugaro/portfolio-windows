@@ -6,7 +6,7 @@ const convertDate = (date) => {
   let [hours, minutes] = date.split(":").map((e) => +e);
   let time = hours >= 12 ? "p. m." : "a. m.";
 
-  hours = hours == 12 ? 12 : hours % 12;
+  hours = hours % 12 ? hours % 12 : 12;
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
 

@@ -1,54 +1,60 @@
-const HTML_CSS_ID = crypto.randomUUID();
-const JAVASCRIPT_ID = crypto.randomUUID();
-const REACT_ID = crypto.randomUUID();
-const NODEJS_ID = crypto.randomUUID();
-const JAVA_ID = crypto.randomUUID();
-const C_ID = crypto.randomUUID();
+const HTML_CSS = "HTML/CSS";
+const JAVASCRIPT = "JavaScript";
+const REACT = "React";
+const NODE_JS = "NodeJS";
+const JAVA = "Java";
+const C = "C";
 
 export const folders = [
   {
-    name: "HTML/CSS",
+    name: HTML_CSS,
     icon: "folder-html",
+    type: "folder",
+    color: "black",
     position: { top: 15, left: 15 },
-    id: HTML_CSS_ID,
   },
   {
-    name: "JavaScript",
+    name: JAVASCRIPT,
     icon: "folder-js",
+    type: "folder",
+    color: "black",
     position: { top: 115, left: 15 },
-    id: JAVASCRIPT_ID,
   },
   {
-    name: "React",
+    name: REACT,
     icon: "folder-react",
+    type: "folder",
+    color: "black",
     position: { top: 115, left: 115 },
-    id: REACT_ID,
   },
   {
-    name: "NodeJS",
+    name: NODE_JS,
     icon: "folder-nodejs",
+    type: "folder",
+    color: "black",
     position: { top: 15, left: 315 },
-    id: NODEJS_ID,
   },
   {
-    name: "Java",
+    name: JAVA,
     icon: "folder",
+    type: "folder",
+    color: "black",
     position: { top: 15, left: 415 },
-    id: JAVA_ID,
   },
   {
-    name: "C",
+    name: C,
     icon: "folder",
+    type: "folder",
+    color: "black",
     position: { top: 115, left: 315 },
-    id: C_ID,
   },
 ];
 
 export const foldersIds = {
-  HTML_CSS_ID,
-  JAVASCRIPT_ID,
-  REACT_ID,
-  NODEJS_ID,
-  JAVA_ID,
-  C_ID,
+  HTML_CSS,
+  JAVASCRIPT,
+  REACT,
+  NODE_JS,
+  JAVA,
+  C,
 };

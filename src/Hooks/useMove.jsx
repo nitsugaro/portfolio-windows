@@ -10,6 +10,13 @@ export default function useMove(container, target, initPosition) {
   let prevMove = null;
 
   useEffect(() => {
+    if (currentContainer == null || currentTarget == null) return;
+
+    currentTarget.style.top = initPosition.top + "px";
+    currentTarget.style.left = initPosition.left + "px";
+  }, [currentContainer, currentTarget]);
+
+  useEffect(() => {
     if (currentContainer == null || currentTarget == null || !mousePressed)
       return;
 
@@ -31,7 +38,7 @@ export default function useMove(container, target, initPosition) {
     currentContainer.addEventListener("mousemove", cbMouseMove);
 
     return () => currentContainer.removeEventListener("mousemove", cbMouseMove);
-  }, [mousePressed, actualPosition, container, target]);
+  }, [mousePressed, actualPosition, currentContainer, currentTarget]);
 
   return {
     setMousePressed,

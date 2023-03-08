@@ -14,18 +14,17 @@ export function MyProvider({ children }) {
     height: window.innerHeight - 45,
   });
   const [folders, setFolders] = useState([]);
-  const [foldersActive, setFoldersActive] = useState([]);
-  const [folderSelected, setFolderSelected] = useState("");
+  const [windowsActive, setWindowsActive] = useState([]);
+  const [windowSelected, setWindowSelected] = useState("");
 
-  const addFolderActive = useCallback(
-    (folderActive) =>
-      setFoldersActive((prevFolders) => [...prevFolders, folderActive]),
-    []
-  );
+  const addWindowActive = useCallback((folderActive) => {
+    setWindowsActive((prevFolders) => [...prevFolders, folderActive]),
+      setWindowSelected(folderActive.id);
+  }, []);
 
-  const removeFolderActive = useCallback(
+  const removeWindowActive = useCallback(
     (id) =>
-      setFoldersActive((prevFolders) =>
+      setWindowsActive((prevFolders) =>
         prevFolders.filter((folder) => folder.id != id)
       ),
     []
@@ -66,12 +65,12 @@ export function MyProvider({ children }) {
         setHomeBounds,
         folders,
         setFolders,
-        foldersActive,
-        setFoldersActive,
-        addFolderActive,
-        removeFolderActive,
-        setFolderSelected,
-        folderSelected,
+        windowsActive,
+        setWindowsActive,
+        addWindowActive,
+        removeWindowActive,
+        setWindowSelected,
+        windowSelected,
       }}
     >
       {children}

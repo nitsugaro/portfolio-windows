@@ -30,18 +30,13 @@ export default function Folder({
   widthFile,
   boundsHome,
   homeRef,
-  mouseInHome,
   handleFolders,
   foldersOrFiles,
 }) {
   const folderRef = useRef(null);
-  const { addFolderActive, setFolderSelected } = useContext(MyContext);
+  const { addWindowActive, setWindowSelected } = useContext(MyContext);
   const { setMousePressed, setActualPosition, mousePressed, actualPosition } =
     useMove(homeRef, folderRef, folder.position);
-
-  useEffect(() => {
-    if (!mouseInHome) handleMouseUp();
-  }, [mouseInHome]);
 
   const handleMouseUp = useCallback(() => {
     setMousePressed(false);
@@ -74,15 +69,13 @@ export default function Folder({
       onMouseDown={() => setMousePressed(true)}
       onMouseUp={handleMouseUp}
       onBlur={handleMouseUp}
-      onDoubleClick={() => {
-        let id = crypto.randomUUID();
-        addFolderActive({
+      onDoubleClick={() =>
+        addWindowActive({
           ...folder,
+          id: crypto.randomUUID(),
           minimized: false,
-        });
-
-        setFolderSelected(id);
-      }}
+        })
+      }
     >
       <Svg icon={folder.icon} className={s["folder-icon"]} />
       <h3 className={s["folder-name"]}>{folder.name}</h3>

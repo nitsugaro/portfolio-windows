@@ -1,11 +1,21 @@
 .window-navbar-container {
   height: 30px;
-  background-color: var(--black);
   display: flex;
   justify-content: space-between;
-  position: static;
+  position: sticky;
   top: 0px;
   left: 0px;
+  user-select: none;
+  cursor: default;
+  z-index: 2;
+}
+
+.navbar-white {
+  background-color: var(--white);
+}
+
+.navbar-black {
+  background-color: var(--black);
 }
 
 .container-items-right {
@@ -21,11 +31,23 @@
   padding: 0 0.6rem;
 }
 
-.x-navbar {
+.icon-navbar {
   height: 80%;
 }
 
-.container-item:hover {
+.icon-white * {
+  fill: var(--black);
+}
+
+.icon-black * {
+  fill: var(--white);
+}
+
+.container-item-white:hover {
+  background-color: var(--shine-gray-windows);
+}
+
+.container-item-black:hover {
   background-color: var(--gray-windows);
 }
 
@@ -39,11 +61,20 @@
 }
 
 .item-left-title {
-  font-weight: 100;
-  color: var(--white);
+  font-weight: 500;
   margin-left: 0.3rem;
 }
 
+.item-left-title-black {
+  color: var(--white);
+}
+
+.item-left-title-white {
+  color: var(--black);
+}
+
 .folder-icon {
-  height: 80%;
+  height: 25px;
+  width: 25px;
+  padding-left: 0.6rem;
 }

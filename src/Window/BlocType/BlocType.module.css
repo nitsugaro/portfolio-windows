@@ -1,0 +1,21 @@
+.bloc-container {
+  width: calc(100%);
+  height: calc(100%);
+  display: block;
+  font-size: 1.025rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  border-top: 1px solid var(--light-gray-windows);
+  overflow-x: auto;
+}
+
+.bloc-container:focus {
+  outline: none;
+  border: none;
+  border-top: 1px solid var(--light-gray-windows);
+}

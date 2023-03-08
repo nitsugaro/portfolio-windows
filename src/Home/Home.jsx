@@ -9,67 +9,24 @@ import {
 import Folder from "../Folder/Folder";
 import s from "./Home.module.css";
 import { MyContext } from "../GlobalContext/GlobalContext";
-import WindowFolder from "../WindowFolder/WindowFolder";
-import folders from "../Data/folders";
-
-const currentFoldersOrFiles = [
-  {
-    name: "HTML/CSS",
-    icon: "folder-html",
-    position: { top: 15, left: 15 },
-  },
-  {
-    name: "JavaScript",
-    icon: "folder-js",
-    position: { top: 115, left: 15 },
-  },
-  {
-    name: "React",
-    icon: "folder-react",
-    position: { top: 115, left: 115 },
-  },
-  {
-    name: "NodeJS",
-    icon: "folder-nodejs",
-    position: { top: 15, left: 315 },
-  },
-  {
-    name: "Java",
-    icon: "folder",
-    position: { top: 15, left: 415 },
-  },
-  {
-    name: "C",
-    icon: "folder",
-    position: { top: 115, left: 315 },
-  },
-];
+import Window from "../Window/Window";
+import { folders } from "../Data/folders";
+import FolderType from "../WindowType/FolderType/FolderType";
+import IframeType from "../WindowType/IframeType/IframeType";
+import BlocType from "../Window/BlocType/BlocType";
+import ImageType from "../Window/ImageType/ImageType";
 
 export default function Home() {
   const homeRef = useRef(null);
-  const [mouseInHome, setMouseInHome] = useState(false);
-  const [foldersOrFiles, setFoldersOrFiles] = useState(currentFoldersOrFiles);
+  const [foldersOrFiles, setFoldersOrFiles] = useState(folders);
   const [widthFile, setWidthFile] = useState(null);
   const { window } = useContext(MyContext).global;
-  const { foldersActive } = useContext(MyContext);
+  const { windowsActive } = useContext(MyContext);
 
   useEffect(() => {
     if (!homeRef.current) return;
     const { width } = window;
     setWidthFile(width > 1250 ? 100 : width > 900 ? 50 : 20);
-
-    const domHome = homeRef.current;
-
-    const cbMouseLeave = () => setMouseInHome(false);
-    const cbMouseEnter = () => setMouseInHome(true);
-
-    domHome.addEventListener("mouseleave", cbMouseLeave);
-    domHome.addEventListener("mouseenter", cbMouseEnter);
-
-    return () => {
-      domHome.removeEventListener("mouseleave", cbMouseLeave);
-      domHome.removeEventListener("mouseenter", cbMouseEnter);
-    };
   }, [homeRef, window]);
 
   const handleFolders = useCallback(
@@ -99,17 +56,26 @@ export default function Home() {
             foldersOrFiles={foldersOrFiles}
             handleFolders={handleFolders}
             homeRef={homeRef}
-            mouseInHome={mouseInHome}
           />
         ))}
-      {foldersActive.map((folder) => (
-        <WindowFolder
-          name={folder.name}
-          icon={folder.icon}
+      {windowsActive.map((window) => (
+        <Window
+          folder={window}
           homeRef={homeRef}
-          id={folder.id}
-          key={folder.id}
-          minimized={folder.minimized}
+          key={window.id}
+          minimized={window.minimized}
+          colorNavbar={window.color}
+          content={
+            window.type == "iframe" ? (
+              <IframeType src={window.url} />
+            ) : window.type == "bloc" ? (
+              <BlocType text={window.text} />
+            ) : window.type == "image" ? (
+              <ImageType src={window.url} name={window.name} />
+            ) : (
+              <FolderType name={window.name} />
+            )
+          }
         />
       ))}
     </div>
