@@ -1,20 +1,17 @@
 import { useCallback } from "react";
 import Svg from "../SVG/Svg";
 
-export default function Menu({ options, onSelect, open, setOpen, s }) {
-  const handleSelect = useCallback((value) => {
-    setOpen(false);
-    onSelect(value);
-  }, []);
+export default function Menu({ options, onSelect, open, s }) {
+  const handleSelect = useCallback((value) => onSelect(value), []);
 
   return (
     <div className={`${s["menu-container"]} ${open ? s.active : ""}`.trim()}>
       {open ? (
-        options.map(({ value, name, icon }) => (
+        options.map(({ value, name, icon }, i) => (
           <div
-            onClick={() => handleSelect(value)}
+            onMouseDown={() => handleSelect(value)}
             className={`${s["menu-option"]}`}
-            key={value}
+            key={i}
           >
             <Svg icon={icon} className={s["menu-icon"]} />
             <h4 className={`${s["menu-label"]}`}>{name}</h4>

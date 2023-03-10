@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { MyContext } from "../GlobalContext/GlobalContext";
 
 export default function useMove(container, target, initPosition) {
+  const { global } = useContext(MyContext);
+  const isDesktop = global.window.width > 900;
   const [mousePressed, setMousePressed] = useState(false);
+  const [mouseMove, setMouseMove] = useState(false);
   const [actualPosition, setActualPosition] = useState(initPosition);
 
   const currentContainer = container.current;
@@ -21,9 +25,14 @@ export default function useMove(container, target, initPosition) {
       return;
 
     const cbMouseMove = (e) => {
+      const { clientX, clientY } =
+        e.type === "touchmove" ? e.targetTouches[0] : e;
+
+      setMouseMove(true);
+
       if (prevMove) {
-        const difX = e.clientX - prevMove.x;
-        const difY = e.clientY - prevMove.y;
+        const difX = clientX - prevMove.x;
+        const difY = clientY - prevMove.y;
         const { top, left } = currentTarget.getBoundingClientRect();
         const x = left + difX + "px";
         const y = top + difY + "px";
@@ -32,12 +41,19 @@ export default function useMove(container, target, initPosition) {
         currentTarget.style.left = x;
       }
 
-      prevMove = { x: e.clientX, y: e.clientY };
+      prevMove = { x: clientX, y: clientY };
     };
 
-    currentContainer.addEventListener("mousemove", cbMouseMove);
+    isDesktop && currentContainer.addEventListener("mousemove", cbMouseMove);
+    !isDesktop && currentContainer.addEventListener("touchmove", cbMouseMove);
 
-    return () => currentContainer.removeEventListener("mousemove", cbMouseMove);
+    return () => {
+      setMouseMove(false);
+      isDesktop &&
+        currentContainer.removeEventListener("mousemove", cbMouseMove);
+      !isDesktop &&
+        currentContainer.removeEventListener("touchmove", cbMouseMove);
+    };
   }, [mousePressed, actualPosition, currentContainer, currentTarget]);
 
   return {
@@ -45,5 +61,6 @@ export default function useMove(container, target, initPosition) {
     setActualPosition,
     mousePressed,
     actualPosition,
+    mouseMove,
   };
 }

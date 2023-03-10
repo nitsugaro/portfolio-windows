@@ -21,11 +21,13 @@
 
 .loading-title {
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .loading-subtitle {
   font-size: 1.2rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .init-button {
@@ -61,4 +63,13 @@
 .fadeExitActive {
   opacity: 0;
   transition: opacity 500ms;
+}
+
+@media screen and (max-width: 500px) {
+  .init-button {
+    font-size: 1.2rem;
+  }
+  .loading-subtitle {
+    font-size: 1rem;
+  }
 }

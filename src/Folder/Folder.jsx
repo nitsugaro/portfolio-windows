@@ -3,6 +3,7 @@ import s from "./Folder.module.css";
 import Svg from "../SVG/Svg";
 import useMove from "../Hooks/useMove";
 import { MyContext } from "../GlobalContext/GlobalContext";
+import { v4 as uuidv4 } from "uuid";
 
 const checkLimit = (top, left, widthFile, boundsHome) => {
   const { width, height } = boundsHome;
@@ -34,9 +35,16 @@ export default function Folder({
   foldersOrFiles,
 }) {
   const folderRef = useRef(null);
-  const { addWindowActive, setWindowSelected } = useContext(MyContext);
-  const { setMousePressed, setActualPosition, mousePressed, actualPosition } =
-    useMove(homeRef, folderRef, folder.position);
+  const [timeoutOpen, setTimeoutOpen] = useState(null);
+  const { addWindowActive, global } = useContext(MyContext);
+  const isDesktop = global.window.width > 900;
+  const {
+    setMousePressed,
+    setActualPosition,
+    mousePressed,
+    actualPosition,
+    mouseMove,
+  } = useMove(homeRef, folderRef, folder.position);
 
   const handleMouseUp = useCallback(() => {
     setMousePressed(false);
@@ -59,6 +67,18 @@ export default function Folder({
     }
   }, [folderRef, actualPosition]);
 
+  const handleOpenWindow = useCallback(() => {
+    addWindowActive({
+      ...folder,
+      id: uuidv4(),
+      minimized: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (mouseMove) clearTimeout(timeoutOpen);
+  }, [mouseMove, timeoutOpen]);
+
   return (
     <div
       tabIndex={0}
@@ -66,16 +86,26 @@ export default function Folder({
       className={`${s["folder-container"]} ${
         mousePressed ? s.active : ""
       }`.trim()}
-      onMouseDown={() => setMousePressed(true)}
-      onMouseUp={handleMouseUp}
-      onBlur={handleMouseUp}
-      onDoubleClick={() =>
-        addWindowActive({
-          ...folder,
-          id: crypto.randomUUID(),
-          minimized: false,
-        })
+      onMouseDown={isDesktop ? () => setMousePressed(true) : undefined}
+      onMouseUp={isDesktop ? handleMouseUp : undefined}
+      onTouchStart={
+        !isDesktop
+          ? () => {
+              setTimeoutOpen(setTimeout(handleOpenWindow, 1000));
+              setMousePressed(true);
+            }
+          : undefined
       }
+      onTouchEnd={
+        !isDesktop
+          ? () => {
+              clearTimeout(timeoutOpen);
+              handleMouseUp();
+            }
+          : undefined
+      }
+      onBlur={handleMouseUp}
+      onDoubleClick={handleOpenWindow}
     >
       <Svg icon={folder.icon} className={s["folder-icon"]} />
       <h3 className={s["folder-name"]}>{folder.name}</h3>

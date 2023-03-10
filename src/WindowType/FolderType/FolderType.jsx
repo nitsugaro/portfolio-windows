@@ -1,12 +1,12 @@
 import s from "./FolderType.module.css";
-import { subFolders } from "../../Data/files";
 import Svg from "../../SVG/Svg";
 import { useCallback, useContext, useState } from "react";
 import { MyContext } from "../../GlobalContext/GlobalContext";
+import { v4 as uuidv4 } from "uuid";
 
-export default function FolderType({ name }) {
+export default function FolderType({ folder }) {
   const { addWindowActive } = useContext(MyContext);
-  const [chain, setChain] = useState([subFolders[name]]);
+  const [chain, setChain] = useState([folder.current]);
   const [index, setIndex] = useState(0);
 
   const handleDoubleClick = useCallback(
@@ -20,7 +20,12 @@ export default function FolderType({ name }) {
         return;
       }
 
-      addWindowActive({ ...item, id: crypto.randomUUID(), minimized: false });
+      if (item.type == "anchor") {
+        window.open(item.url, "_blank");
+        return;
+      }
+
+      addWindowActive({ ...item, id: uuidv4(), minimized: false });
     },
     [chain, index]
   );
@@ -53,6 +58,7 @@ export default function FolderType({ name }) {
           key={i}
           className={s["item-container"]}
           onDoubleClick={() => handleDoubleClick(item)}
+          onTouchStart={() => handleDoubleClick(item)}
         >
           <div className={s["item-left"]}>
             <Svg icon={item.icon} className={s["item-icon"]} />

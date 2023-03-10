@@ -1,7 +1,3 @@
-import { foldersIds } from "./folders";
-import perfilMe from "../assets/perfil-me.jpg";
-
-// HTML/CSS
 const tributePage = [
   {
     name: "Tribute Page.html",
@@ -37,7 +33,7 @@ const formPage = [
     name: "Form Page.html",
     date: "10/05/2022 08:15 a. m.",
     icon: "chrome",
-    url: "https://codepen.io/Nitsuga159/full/JjpGBxY",
+    url: "https://codepen.io/Nitsuga159/full/MWQeJZX",
     color: "white",
     type: "iframe",
   },
@@ -63,7 +59,7 @@ const technicalDocumentation = [
     name: "Technical Documentation.html",
     date: "20/05/2022 09:07 a. m.",
     icon: "chrome",
-    url: "https://codepen.io/Nitsuga159/full/JjpGBxY",
+    url: "https://codepen.io/Nitsuga159/full/poargLJ",
     color: "white",
     type: "iframe",
   },
@@ -88,10 +84,10 @@ const landingPage = [
   {
     name: "Landing.html",
     date: "21/05/2022 08:24 a. m.",
-    icon: "iframe",
-    url: "https://codepen.io/Nitsuga159/full/JjpGBxY",
+    icon: "chrome",
+    url: "https://codepen.io/Nitsuga159/full/rNJMdxw",
     color: "white",
-    type: "html",
+    type: "iframe",
   },
   {
     name: "Landing.txt",
@@ -110,39 +106,12 @@ const landingPage = [
   },
 ];
 
-//JAVASCRIPT
-const snake = [
-  {
-    name: "snake.html",
-    date: "29/10/2022 03:24 p. m.",
-    icon: "chrome",
-    url: "https://nitsuga159.github.io/Snake-Game/",
-    color: "white",
-    type: "iframe",
-  },
-  {
-    name: "snake.txt",
-    date: "2/11/2022 12:24 p. m.",
-    icon: "bloc",
-    color: "white",
-    type: "bloc",
-    text: {
-      english: "Hola qué tal",
-      spanish: "Hi, how are you ?",
-    },
-  },
-  {
-    name: "snake.jpg",
-    date: "4/11/2022 06:49 p. m.",
-    icon: "image",
-    url: perfilMe,
-    color: "black",
-    type: "image",
-  },
-];
-
-export const subFolders = {
-  [foldersIds.HTML_CSS]: [
+export default {
+  name: "HTML/CSS",
+  icon: "folder-html",
+  type: "folder",
+  color: "black",
+  current: [
     {
       name: "Tribute Page",
       icon: "folder",
@@ -176,18 +145,4 @@ export const subFolders = {
       current: landingPage,
     },
   ],
-  [foldersIds.JAVASCRIPT]: [
-    {
-      name: "Snake Game",
-      icon: "folder",
-      type: "folder",
-      color: "black",
-      date: "29/10/2022 03:24 p. m.",
-      current: snake,
-    },
-  ],
-  [foldersIds.REACT]: [],
-  [foldersIds.NODE_JS]: [],
-  [foldersIds.JAVA]: [],
-  [foldersIds.C]: [],
 };

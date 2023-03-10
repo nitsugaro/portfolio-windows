@@ -12,4 +12,94 @@
   position: absolute;
   bottom: 0;
   background-color: var(--black-windows);
+  user-select: none;
+}
+
+.right-side-toolbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 3.5rem;
+  gap: 1rem;
+}
+
+.lenguage-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.lenguage-icon {
+  width: 30px;
+  height: 80%;
+}
+
+.menu-container {
+  position: absolute;
+  min-width: 100px;
+  height: 100px;
+  top: -100px;
+  left: 0;
+  box-sizing: border-box;
+  background: var(--dark-windows);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  background-color: var(--black-windows);
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+  z-index: 9;
+}
+
+.active {
+  transform: scaleY(1);
+}
+
+.menu-option {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.7rem;
+}
+
+.menu-option:hover {
+  background-color: var(--gray-windows);
+}
+
+.menu-label {
+  font-weight: 100;
+  color: var(--white);
+}
+
+.menu-icon {
+  width: 25px;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .lenguage-icon {
+    width: 20px;
+    height: 100%;
+  }
+
+  .right-side-toolbar {
+    gap: 0.5rem;
+  }
+
+  .menu-container {
+    min-width: 50px;
+    height: 50px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .menu-option {
+    height: 25px;
+  }
+
+  .menu-icon {
+    width: 15px;
+    padding-right: 0.5rem;
+  }
 }

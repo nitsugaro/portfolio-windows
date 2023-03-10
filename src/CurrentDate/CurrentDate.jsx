@@ -24,8 +24,8 @@ export default function CurrentDate() {
 
   return (
     <div className={s["date-container"]}>
-      <p className={s["time"]}>{convertDate(date)}</p>
-      <p className={s["date"]}>{date.toLocaleDateString()}</p>
+      <p>{convertDate(date)}</p>
+      <p>{date.toLocaleDateString()}</p>
     </div>
   );
 }

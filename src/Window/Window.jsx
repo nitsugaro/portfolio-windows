@@ -1,4 +1,4 @@
-import { useCallback, useContext, useRef, useState } from "react";
+import { useCallback, useContext, useRef } from "react";
 import s from "./Window.module.css";
 import { MyContext } from "../GlobalContext/GlobalContext";
 import useMove from "../Hooks/useMove";
@@ -21,24 +21,22 @@ export default function Window({
     top: height / 4 + "px",
   };
 
-  const { setMousePressed, mousePressed } = useMove(
-    homeRef,
-    windowRef,
-    position
-  );
+  const { setMousePressed } = useMove(homeRef, windowRef, position);
 
   const handleMousePressed = useCallback(() => setMousePressed(true), []);
   const handleMouseUp = useCallback(() => setMousePressed(false), []);
 
+  const isIframe = folder.type == "iframe";
   return (
     <div
       ref={windowRef}
       style={{
-        width: width / 2 + "px",
-        height: height / 2 + "px",
+        width: isIframe ? "100%" : width / 2 + "px",
+        height: isIframe ? "100%" : height / 2 + "px",
         maxWidth: width,
         maxHeight: height,
-        ...position,
+        top: isIframe ? 0 : position.top,
+        left: isIframe ? 0 : position.left,
       }}
       className={`${s["window-folder-container"]} ${
         windowSelected === folder.id ? s.selected : ""

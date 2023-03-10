@@ -59,6 +59,8 @@ export default function LeftSideToolBar() {
     [windowsActive]
   );
 
+  const handleAnchor = useCallback((value) => window.open(value, "_blank"), []);
+
   return (
     <div className={s["left-side-container"]}>
       <div
@@ -67,13 +69,7 @@ export default function LeftSideToolBar() {
         id="windows-button"
       >
         <Svg icon="windows" className={s["toolbar-windows-svg"]} />
-        <Menu
-          options={options}
-          onSelect={onSelect}
-          open={open}
-          setOpen={setOpen}
-          s={s}
-        />
+        <Menu options={options} onSelect={onSelect} open={open} s={s} />
       </div>
       <div
         className={`${s["toolbar-input-container"]} ${
@@ -101,27 +97,37 @@ export default function LeftSideToolBar() {
         />
       </div>
       <div className={s["container-items"]}>
-        <div className={s["item-container"]}>
+        <div
+          className={s["item-container"]}
+          onClick={() =>
+            handleAnchor(
+              "https://mail.google.com/mail/u/0/?fs=1&to=agusromero0815@gmail.com&tf=cm"
+            )
+          }
+        >
           <Svg className={s["item"]} icon="gmail" />
         </div>
-        <div className={s["item-container"]}>
+        <div
+          className={s["item-container"]}
+          onClick={() => handleAnchor("https://github.com/Nitsuga159")}
+        >
           <Svg className={s["item"]} icon="github" />
         </div>
-        <div className={s["item-container"]}>
+        <div
+          className={s["item-container"]}
+          onClick={() =>
+            handleAnchor(
+              "https://www.linkedin.com/in/agust%C3%ADn-romero-33919b24b/"
+            )
+          }
+        >
           <Svg className={s["item"]} icon="linkedin" />
         </div>
-        <div className={s["item-container"]}>
+        <div
+          className={s["item-container"]}
+          onClick={() => handleAnchor("https://walink.co/ab523e")}
+        >
           <Svg className={s["item"]} icon="whatsapp" />
-        </div>
-
-        <div className={s["item-container"]}>
-          <Svg className={s["item"]} icon="discord" />
-        </div>
-        <div className={s["item-container"]}>
-          <Svg className={s["item"]} icon="skype" />
-        </div>
-        <div className={s["item-container"]}>
-          <Svg className={s["item"]} icon="reddit" />
         </div>
 
         {windowsActive.map(({ icon, id, minimized }) => (

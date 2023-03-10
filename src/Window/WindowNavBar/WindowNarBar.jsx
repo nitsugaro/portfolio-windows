@@ -39,7 +39,9 @@ export default function WindowNavBar({
     <div
       className={`${s["window-navbar-container"]} ${s["navbar-" + color]}`}
       onMouseDown={handleMousePressed}
+      onTouchStart={handleMousePressed}
       onMouseUp={handleMouseUp}
+      onTouchEnd={handleMouseUp}
       onBlur={handleMouseUp}
       tabIndex={0}
     >

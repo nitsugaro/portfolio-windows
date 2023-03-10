@@ -1,32 +1,35 @@
-import {
-  Suspense,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import Folder from "../Folder/Folder";
 import s from "./Home.module.css";
 import { MyContext } from "../GlobalContext/GlobalContext";
 import Window from "../Window/Window";
-import { folders } from "../Data/folders";
+import Project from "../Data/folders";
 import FolderType from "../WindowType/FolderType/FolderType";
 import IframeType from "../WindowType/IframeType/IframeType";
 import BlocType from "../Window/BlocType/BlocType";
 import ImageType from "../Window/ImageType/ImageType";
+import License from "../License/License";
 
 export default function Home() {
   const homeRef = useRef(null);
-  const [foldersOrFiles, setFoldersOrFiles] = useState(folders);
+  const [foldersOrFiles, setFoldersOrFiles] = useState(Project);
   const [widthFile, setWidthFile] = useState(null);
   const { window } = useContext(MyContext).global;
   const { windowsActive } = useContext(MyContext);
+  const [openLicense, setOpenLicense] = useState(false);
 
   useEffect(() => {
     if (!homeRef.current) return;
     const { width } = window;
-    setWidthFile(width > 1250 ? 100 : width > 900 ? 50 : 20);
+    setWidthFile(width > 900 ? 100 : 80);
+
+    if (openLicense) return;
+
+    const cbActiveLicense = () => setOpenLicense(true);
+
+    homeRef.current.addEventListener("click", cbActiveLicense);
+
+    return () => homeRef.current.removeEventListener("click", cbActiveLicense);
   }, [homeRef, window]);
 
   const handleFolders = useCallback(
@@ -49,7 +52,7 @@ export default function Home() {
         homeRef.current &&
         foldersOrFiles.map((folder) => (
           <Folder
-            key={folder.id}
+            key={folder.name}
             folder={folder}
             widthFile={widthFile}
             boundsHome={window}
@@ -58,7 +61,7 @@ export default function Home() {
             homeRef={homeRef}
           />
         ))}
-      {windowsActive.map((window) => (
+      {windowsActive.map((window, index) => (
         <Window
           folder={window}
           homeRef={homeRef}
@@ -67,17 +70,18 @@ export default function Home() {
           colorNavbar={window.color}
           content={
             window.type == "iframe" ? (
-              <IframeType src={window.url} />
+              <IframeType src={window.url} key={index} />
             ) : window.type == "bloc" ? (
-              <BlocType text={window.text} />
+              <BlocType text={window.text} key={index} />
             ) : window.type == "image" ? (
-              <ImageType src={window.url} name={window.name} />
+              <ImageType src={window.url} name={window.name} key={index} />
             ) : (
-              <FolderType name={window.name} />
+              <FolderType folder={window} key={index} />
             )
           }
         />
       ))}
+      {openLicense && <License />}
     </div>
   );
 }

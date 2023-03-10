@@ -6,8 +6,10 @@ export function MyProvider({ children }) {
   const [global, setGlobal] = useState({
     domTarget: null,
     power: true,
-    lenguage: "english",
+    lenguage:
+      localStorage.getItem("lenguage") == "spanish" ? "spanish" : "english",
     window: { width: window.innerWidth, height: window.innerHeight },
+    isFullScreen: true,
   });
   const [homeBounds, setHomeBounds] = useState({
     width: window.innerWidth,
@@ -18,8 +20,11 @@ export function MyProvider({ children }) {
   const [windowSelected, setWindowSelected] = useState("");
 
   const addWindowActive = useCallback((folderActive) => {
-    setWindowsActive((prevFolders) => [...prevFolders, folderActive]),
-      setWindowSelected(folderActive.id);
+    setWindowsActive((prevWindowsActive) => [
+      ...prevWindowsActive,
+      folderActive,
+    ]);
+    setWindowSelected(folderActive.id);
   }, []);
 
   const removeWindowActive = useCallback(

@@ -1,5 +1,4 @@
 .date-container {
-  width: 11rem;
   height: 100%;
   font-size: 0.9rem;
   display: flex;
@@ -7,4 +6,11 @@
   flex-direction: column;
   color: var(--white);
   text-align: center;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  .date-container {
+    font-size: 0.7rem;
+  }
 }

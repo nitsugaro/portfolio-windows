@@ -26,6 +26,7 @@ export default function Loading({ showLoading }) {
           <button
             className={s["init-button"]}
             onClick={() => {
+              document.body.requestFullscreen();
               setStart(true);
               const audio = document.createElement("audio");
               audio.src = usbSound;
@@ -45,8 +46,8 @@ export default function Loading({ showLoading }) {
 
         <h4 className={s["loading-subtitle"]}>
           {lenguage === "spanish"
-            ? "Se recomienda seleccionar pantalla completa."
-            : "It's recommended to select full screen."}
+            ? "Se recomienda mantener la pantalla completa."
+            : "It's recommended to keep full screen."}
         </h4>
       </div>
     </CSSTransition>

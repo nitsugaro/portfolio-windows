@@ -8,14 +8,20 @@ export default function Off() {
   const { setGlobal, global } = useContext(MyContext);
 
   useEffect(() => {
-    const cbKeydown = (e) => {
-      e.key === "Enter" && setGlobal((prev) => ({ ...prev, power: true }));
+    if (global.power) return;
+    const cbStart = () => {
+      document.body.requestFullscreen();
+      setGlobal((prev) => ({ ...prev, power: true }));
     };
 
-    window.addEventListener("keydown", cbKeydown);
+    window.addEventListener("touchstart", cbStart);
+    window.addEventListener("click", cbStart);
 
-    return () => window.removeEventListener("keydown", cbKeydown);
-  }, []);
+    return () => {
+      window.removeEventListener("touchstart", cbStart);
+      window.removeEventListener("click", cbStart);
+    };
+  }, [global]);
 
   return (
     <CSSTransition
@@ -32,8 +38,8 @@ export default function Off() {
       <div className={`${s["off-container"]}`.trim()} tabIndex={0}>
         <h3 className={s.message}>
           {global.lenguage === "spanish"
-            ? "Presione Enter para iniciar"
-            : "Press Enter to start"}
+            ? "Presionar o clickear para iniciar"
+            : "Touch or click to start"}
         </h3>
       </div>
     </CSSTransition>
