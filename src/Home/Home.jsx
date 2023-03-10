@@ -9,6 +9,7 @@ import IframeType from "../WindowType/IframeType/IframeType";
 import BlocType from "../Window/BlocType/BlocType";
 import ImageType from "../Window/ImageType/ImageType";
 import License from "../License/License";
+import bgWindows from "../assets/window-10-background.jpg";
 
 export default function Home() {
   const homeRef = useRef(null);
@@ -47,7 +48,11 @@ export default function Home() {
   );
 
   return (
-    <div className={s["home-container"]} ref={homeRef}>
+    <div
+      className={s["home-container"]}
+      style={{ backgroundImage: `url("${bgWindows}")` }}
+      ref={homeRef}
+    >
       {widthFile &&
         homeRef.current &&
         foldersOrFiles.map((folder) => (
