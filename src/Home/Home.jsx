@@ -29,7 +29,7 @@ export default function Home() {
 
     homeRef.current.addEventListener("click", cbActiveLicense);
 
-    return () => homeRef.current.removeEventListener("click", cbActiveLicense);
+    return () => homeRef.current?.removeEventListener("click", cbActiveLicense);
   }, [homeRef, window]);
 
   const handleFolders = useCallback(

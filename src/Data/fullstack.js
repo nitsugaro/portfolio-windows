@@ -26,8 +26,13 @@ const pokemon = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Full stack web application about the 'Pokemon' animated series, where anyone can enter this website to search, filter, and sort Pokemons from the animated series. Additionally, you can view their statistics for each one, and even if you register through Google, you can create your own Pokemons, which can be viewed by other users.
+
+Tech Stack: HTML, CSS, JavaScript, React-Redux, NodeJS, Express, Sequelize, PostgreSQL.`,
+      spanish: `Aplicación web full stack sobre la serie animada 'Pokemon', donde cualquier persona que ingrese a esta web para buscar, filtrar y ordenar pokemons de la serie animada. Además, podrás ver sus estadísticas de cada uno e incluso, si te registras a través de Google, podrás crear tus propios pokemons, los cuales podrán ser vistos por otros usuarios.
+
+      Tech Stack: HTML, CSS, JavaScript, React-Redux, NodeJS, Express, Sequelize, PostgreSQL.
+      `,
     },
   },
   {
@@ -89,8 +94,17 @@ const campy = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `FullStack web application dedicated to Argentine tourism enthusiasts, so they can find and plan their next trip, while also sharing their experience with other users in the 'Campy' community. This project includes several interactions, such as login, home, a map to guide travelers, a blog to publish experiences and comment on others, payment gateway, dashboards for different types of users, email notifications, etc.
+
+If you're interested in learning more about 'Campy', I invite you to watch the video and check out the project on GitHub!
+
+Tech Stack: HTML, CSS, JavaScript, Typescript, React-Redux, NodeJS, MaterialUI, Express, Sequelize, MySQL, JWT, Nodemailer, Cloudinary, Mercado Pago, Auth0.`,
+      spanish: `Aplicación web FullStack dedicada a los amantes del turismo argentino, para que puedan encontrar y planificar su próximo viaje, compartiendo además su experiencia con otros usuarios de la comunidad 'Campy'. Este proyecto cuenta con varias interacciones, como un login, home, mapa para guiar a los viajeros, blog para publicar experiencias y comentar en otros, pasarela de pago, dashboards para los distintos tipos de usuarios, notificaciones por mail, etc.
+
+Si te interesa saber más acerca de 'Campy' te invito a ver el video y proyecto en GitHub!
+
+Tech Stack: HTML, CSS, JavaScript, Typescript, React-Redux, NodeJS, MaterialUI, Express, Sequelize, MySQL, JWT, Nodemailer, Cloudinary, Mercado Pago, Auth0.
+      `,
     },
   },
   {

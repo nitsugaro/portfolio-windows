@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.541);
-  z-index: 5;
+  z-index: 11;
   animation: aparecer 0.3s ease forwards;
 }
 

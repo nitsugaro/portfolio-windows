@@ -22,8 +22,13 @@ const cinema = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Famous movies and series billboard consulted through an IMDB API. They can be searched, see their details such as box office, release date, and synopsis, as well as being added to favorites and consulted in their corresponding section, along with the ability to filter them by name.
+
+Developed with HTML, CSS, and JavaScript, all through the React framework and Redux to maintain global states.`,
+      spanish: `Cartelera de películas y series famosas consultadas a través de una API de IMDB. Se pueden buscar, ver detalle de las mismas como su recaudación, estreno y sinopsis, cómo también ser agregada a favoritos y consultarla en su apartado correspondiente, junto a la capacidad de filtrarlos por nombre.
+
+Realizado con HTML, CSS y JavaScript, todo eso a través del Framework React y Redux para mantener estados globales.
+      `,
     },
   },
   {
@@ -60,8 +65,13 @@ const markdownEditor = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Real-time Markdown editor. You can format your own document in the editor section and as soon as it's processed by the program, it will appear with a result in the output. You can even write HTML code and it will be rendered as such.
+
+Tech Stack: HTML, CSS, JavaScript, React.`,
+      spanish: `Editor Markdown en tiempo real. Puedes maquetar tu propio documento en el apartado de editor y tan pronto sea procesado por el programa, éste saldrá con un resultado en sálida. Se puede incluso escribir código HTML y será renderizado como tal. 
+
+Tech Stack: HTML, CSS, JavaScript, React.
+      `,
     },
   },
   {
@@ -90,8 +100,13 @@ const cesarCipher = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Web application where you can enter a text and a key to encrypt it in the style of Julius Caesar, resulting in an encrypted text with the key. Similarly, a text can be decrypted on the same page, if the correct key is available.
+
+Tech Stack: HTML, CSS, JavaScript, React.`,
+      spanish: `Aplicación web donde se podrá colocar un texto y una clave para hacer un cifrado al estilo Julio César, dando por resultado un texto encriptado con la clave. De la misma manera, se puede desencriptar un texto, si se tiene la clave correcta, en la misma página.
+
+Tech Stack: HTML, CSS, Javascript, React.
+      `,
     },
   },
   {
@@ -120,8 +135,13 @@ const weather = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Weather app, where you can search for a location and get the temperature for that location.
+
+Tech Stack: HTML, CSS, JavaScript, React.`,
+      spanish: `App de clima, donde se podrá buscar una locación y obtener los grados que hay en las mismas.
+
+Tech Stack: HTML, CSS, JavaScript, React.
+      `,
     },
   },
   {
@@ -150,8 +170,8 @@ const calculator = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Fully functional calculator made entirely in React.`,
+      spanish: `Calculadora funcional hecha 100% en React.`,
     },
   },
   {
@@ -180,8 +200,8 @@ const soundReproductor = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Sound player made in React, with the ability to handle two sound tracks, control the volume, turn it on or off, and control it from the keyboard or by clicking on the buttons.`,
+      spanish: `Reproductor de sonidos hecho en React, con capacidad de dos bandas de sonidos, capacidad de manejar el volumen del mismo, apagar o encender y manejar desde el teclado o presionando en los botones.`,
     },
   },
   {
@@ -210,8 +230,9 @@ const cronometer = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `5 + 25 timer, with the ability to add or decrease time for the break or the count.`,
+      spanish: `Cronómetro 5 + 25, con capacidad de agregar o disminuir tiempo en el descando o el conteo del mismo.
+      `,
     },
   },
   {

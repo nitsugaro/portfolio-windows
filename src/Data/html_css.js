@@ -14,17 +14,9 @@ const tributePage = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Biography of a television series character, Jimmy McGill. Layout designed using HTML/CSS.`,
+      spanish: `Biografía de un personaje de una serie de televisión, Jimmy McGill. Maquetado hecho con HTML/CSS`,
     },
-  },
-  {
-    name: "Tribute Page.jpg",
-    date: "01/05/2022 05:36 p. m.",
-    icon: "image",
-    url: "",
-    color: "black",
-    type: "image",
   },
 ];
 
@@ -43,14 +35,10 @@ const formPage = [
     icon: "bloc",
     color: "white",
     type: "bloc",
-  },
-  {
-    name: "Form Page.jpg",
-    date: "10/05/2022 01:43 p. m.",
-    icon: "image",
-    url: "",
-    color: "black",
-    type: "image",
+    text: {
+      english: `Breaking Bad form created using HTML and styled with CSS, adding text inputs, check boxes, and radio buttons.`,
+      spanish: `Formulario de Breaking Bad creado con HTML y estilizado con CSS, agregando inputs de texto, casillas check y radio buttons.`,
+    },
   },
 ];
 
@@ -69,40 +57,10 @@ const technicalDocumentation = [
     icon: "bloc",
     color: "white",
     type: "bloc",
-  },
-  {
-    name: "Technical Documentation.jpg",
-    date: "20/05/2022 04:43 p. m.",
-    icon: "image",
-    url: "",
-    color: "black",
-    type: "image",
-  },
-];
-
-const landingPage = [
-  {
-    name: "Landing.html",
-    date: "21/05/2022 08:24 a. m.",
-    icon: "chrome",
-    url: "https://codepen.io/Nitsuga159/full/rNJMdxw",
-    color: "white",
-    type: "iframe",
-  },
-  {
-    name: "Landing.txt",
-    date: "21/05/2022 10:44 a. m.",
-    icon: "bloc",
-    color: "white",
-    type: "bloc",
-  },
-  {
-    name: "Landing.jpg",
-    date: "21/05/2022 03:49 p. m.",
-    icon: "image",
-    url: "",
-    color: "black",
-    type: "image",
+    text: {
+      english: `Technical documentation on how to create a palindrome checker in JavaScript, with a navbar that segments each section or step to follow. HTML for structure and CSS for design.`,
+      spanish: `Documentación técnica sobre cómo crear un comprobador de palíndromos en JavaScript, con un navbar el cual tiene segmentado cada sección o paso a seguir. HTML para la estructura y CSS para el diseño.`,
+    },
   },
 ];
 
@@ -135,14 +93,6 @@ export default {
       color: "black",
       date: "20/05/2022 09:07 a. m.",
       current: technicalDocumentation,
-    },
-    {
-      name: "Landing Page",
-      date: "21/05/2022 08:24 a. m.",
-      icon: "folder",
-      type: "folder",
-      color: "black",
-      current: landingPage,
     },
   ],
 };

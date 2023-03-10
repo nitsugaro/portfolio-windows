@@ -20,8 +20,9 @@ const snake = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Snake game made 100% in HTML, CSS, and JavaScript, with well-planned logic to ensure a good user experience.`,
+      spanish: `Juego de la serpiente hecho 100% en HTML, CSS y JavaScript. Con toda su lógica bien planificada para garantizar la buena experiencia del usuario.
+      `,
     },
   },
   {
@@ -57,8 +58,8 @@ const ticTacToe = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: "Tic tac toe made in JavaScript :)",
+      spanish: "Ta te ti hecho en JavaScript :)",
     },
   },
   {
@@ -87,8 +88,9 @@ const randomQuotes = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Random quotes generated through a button, with the ability to publish them on the Twitter social network.`,
+      spanish: `Frases aleatorias generadas a través de un botón. Con la capacidad de publicarlo en la red social Twitter.
+      `,
     },
   },
   {
@@ -109,17 +111,6 @@ const sales = [
     url: "https://codepen.io/Nitsuga159/full/VwXZLrg",
     color: "white",
     type: "iframe",
-  },
-  {
-    name: "Sales.txt",
-    date: "23/08/2022 10:35 a. m.",
-    icon: "bloc",
-    color: "white",
-    type: "bloc",
-    text: {
-      english: "",
-      spanish: "",
-    },
   },
   {
     name: "Sales.jpg",

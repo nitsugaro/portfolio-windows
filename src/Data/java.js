@@ -19,8 +19,13 @@ const chess = [
     color: "white",
     type: "bloc",
     text: {
-      english: "",
-      spanish: "",
+      english: `Chess game developed in Java with the native Swing package for the creation of the graphical user interface. 
+      
+Object-oriented programming and logical development for a good gaming experience.`,
+      spanish: `Ajedrez realizado en Java junto al paquete nativo Swing, para la creación de la interfaz gráfica. 
+      
+Programación orientada a objetos y desarrollo lógica para una buena experiencia de juego en el mismo. 
+      `,
     },
   },
   {
