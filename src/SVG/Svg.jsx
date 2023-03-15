@@ -983,6 +983,7 @@ export default function Svg({ icon, className }) {
         viewBox="0 0 438.549 438.549"
         enableBackground="new 0 0 438.549 438.549;"
         xmlSpace="preserve"
+        fill="white"
         className={className}
       >
         <g>
