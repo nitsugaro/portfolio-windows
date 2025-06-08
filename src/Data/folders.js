@@ -1,5 +1,4 @@
-import CVSpanish from "../assets/CV-AgustinRomero-spanish.pdf";
-import CVEnglish from "../assets/CV-AgustinRomero-english.pdf";
+import CV from "../assets/cv-agustin-romero.pdf";
 import imageMe from "../assets/perfil-me.jpg";
 import javascript from "./javascript.js";
 import html_css from "./html_css.js";
@@ -15,19 +14,34 @@ const aboutMe = [
     name: "Who I am.txt",
     icon: "bloc",
     text: {
-      english: `Hey there! 👋👋 I'm Agustín Romero, Full Stack Developer, with experience in technolies as JavaScript, React, NodeJS, among others. It has been approximately over a year since I have been pushing forward my career as a programmer, whether it is by working on personal projects or taking courses where I can gain more knowledge and improve my skills in development.
-      
-One of my most fundamental studies was at the 'SoyHenry' bootcamp, where I was able to see a large part of how a web application is built from scratch, managing to create one individually and another one as part of a group project, which you can find in this portfolio 😉.
-Currently, I am in search of my next IT opportunity to apply these skills. I am always committed to any project I participate in and I like to give my best effort.
-      
-At the moment, I have great experience in the JavaScript language along with its frameworks and environments that come with it, but I plan to expand my stack by exploring other languages such as Java. That's why I am already working on projects with that language, one of which is chess ♟.`,
-      spanish: `Hey qué tal! 👋👋 Soy Agustín Romero, Full Stack Developer, con experiencia en tecnologías como JavaScript, React, NodeJS, entre otros. Hace aproximadamente más de un año que vengo impulsando mi carrera como programador, ya sea realizando proyectos propios o cursos en los que pueda adquirir mayor conocimiento y mejorar mis habilidades para desarrollar.
-      
-Uno de mis estudios más fundamentales fue en el bootcamp 'SoyHenry', donde pude ver gran parte de cómo se conforma una aplicación web desde cero, logrando crear una misma en un proyecto individual y otra de manera grupal, las cuales podrás encontrar en este portafolio 😉.
+      english: `👋 I'm Agustín Romero, an IT professional with a focus on security, digital identity, and software development. I'm passionate about building scalable, secure, and user-oriented solutions by combining both the technical and functional perspectives of each project.
 
-Actualmente me encuentro en la buscada de mi próxima oportunidad IT para desempeñar estos conocimientos. Siempre estoy comprometido ante cualquier proyecto en el que sea participe, y me gusta dar lo mejor de mí.
-      
-Por el momento tengo gran experiencia en el lenguaje JavaScript junto a sus Frameworks y entornos que lo acompañan, pero pienso expandir mi stack pasando por otros lenguajes como Java. Por ello ya me encuentro realizando proyectos con ese lenguaje, siendo uno de esos el ajedrez ♟.`,
+I have over 2 years of experience implementing Identity and Access Management (IAM/CIAM) solutions, actively participating in architectural decisions, technical design, and development.
+
+I’ve worked with tools such as ForgeRock, Ping One Identity, Keycloak, MidPoint, Transmit Security, among others, across projects of varying scale and complexity.
+
+In addition, I bring a strong technical background in software development, including:
+
+SDK and API integration
+
+Implementation of authentication and authorization protocols such as OAuth2, OpenID Connect (OIDC), and handling of JWT tokens
+
+Development of web applications and microservices, with a strong focus on secure system integration`,
+      spanish: `👋 Soy Agustín Romero, profesional del área IT con enfoque en seguridad, identidad digital y desarrollo de software. Me apasiona construir soluciones escalables, seguras y orientadas al usuario, integrando tanto la visión técnica como funcional de los proyectos.
+
+Cuento con más de 2 años de experiencia en la implementación de soluciones de Manejo de Acceso e Identidad (IAM/CIAM), participando activamente en definiciones de arquitectura, diseño técnico y desarrollo.
+
+He trabajado con herramientas como ForgeRock, Ping One Identity, Keycloak, MidPoint, Transmit Security, entre otras, en proyectos de distinta escala y complejidad.
+
+Además, tengo un sólido background técnico en desarrollo de software, incluyendo:
+
+Integración de SDKs y APIs.
+
+Implementación de protocolos de autenticación/autorización como OAuth2, OpenID Connect (OIDC), y manejo de tokens JWT.
+
+Desarrollo de aplicaciones web y microservicios, enfocándome en la integración segura entre sistemas.
+
+Esta combinación de experiencia me permite abordar desafíos de identidad digital desde un enfoque integral, garantizando seguridad, rendimiento y una experiencia de usuario fluida.`,
     },
     color: "white",
     type: "bloc",
@@ -41,7 +55,7 @@ Por el momento tengo gran experiencia en el lenguaje JavaScript junto a sus Fram
 
         Frameworks: React-Redux, MaterialUI, Angular, Express, NestJS, Sequelize.
 
-        Others: SocketIO, JWT, Auth0, Firsebase, Nodemailer, Mercado Pago, Cloudinary.
+        Others: OAuth2.0, OIDC, Linux, SocketIO, JWT, Auth0, Firsebase, Nodemailer, Mercado Pago, Cloudinary.
 
         Workshop: Git, Github, Trello, Postman, Insomnia, NPM.
       `,
@@ -49,9 +63,9 @@ Por el momento tengo gran experiencia en el lenguaje JavaScript junto a sus Fram
 
         Librerías: React-Redux, Angular, Express, NestJS, Sequelize.
 
-        Otros: JWT, Auth0, Firsebase, Nodemailer, Mercado Pago, Cloudinary.
+        Otros: OAuth2.0, OIDC, JWT, Linux, Auth0, Firsebase, Nodemailer, Mercado Pago, Cloudinary.
 
-        Ambientes de trabajo: Git, Github, Trello, Postman, Insomnia, NPM.`,
+        Ambientes de trabajo: Git, Github, Trello, Postman, Insomnia, NPM.`
     },
     color: "white",
     type: "bloc",
@@ -67,23 +81,15 @@ Por el momento tengo gran experiencia en el lenguaje JavaScript junto a sus Fram
 
 const desktop = [
   {
-    name: "CV-Spanish.pdf",
+    name: "cv-agustin-romero.pdf",
     icon: "pdf",
     type: "iframe",
     color: "black",
-    url: CVSpanish,
+    url: CV,
     position: { top: 115, left: 15 },
   },
   {
-    name: "CV-English.pdf",
-    icon: "pdf",
-    type: "iframe",
-    color: "black",
-    url: CVEnglish,
-    position: { top: 115, left: 115 },
-  },
-  {
-    name: "About Me",
+    name: "about-me",
     icon: "folder",
     type: "folder",
     color: "black",
@@ -91,7 +97,7 @@ const desktop = [
     current: aboutMe,
   },
   {
-    name: "Education",
+    name: "education",
     icon: "folder",
     type: "folder",
     color: "black",
@@ -99,7 +105,7 @@ const desktop = [
     current: [henry, freecodecamp],
   },
   {
-    name: "Projects",
+    name: "my-projects",
     icon: "code",
     type: "folder",
     color: "black",

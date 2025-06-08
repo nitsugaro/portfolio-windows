@@ -1,17 +1,14 @@
 import {
   Suspense,
   lazy,
-  useCallback,
   useContext,
   useEffect,
   useRef,
-  useState,
 } from "react";
 import "./App.css";
 import Loading from "./Loading/Loading";
 import { MyContext } from "./GlobalContext/GlobalContext";
 import Off from "./Off/Off";
-import License from "./License/License";
 
 const Home = lazy(() => import("./Home/Home"));
 const ToolBar = lazy(() => import("./ToolBar/ToolBar"));

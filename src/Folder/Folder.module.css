@@ -1,7 +1,8 @@
 .folder-container {
   font-family: "Open Sans", sans-serif;
   width: 80px;
-  height: 80px;
+  height: min-content;
+  max-height: 75px;
   text-align: center;
   position: absolute;
   cursor: default;
@@ -33,7 +34,7 @@
 
 .folder-container:focus {
   height: auto;
-  min-height: 80px;
+  min-height: min-content;
   overflow-y: visible;
 }
 

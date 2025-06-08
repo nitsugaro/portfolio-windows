@@ -32,7 +32,7 @@ Programación orientada a objetos y desarrollo lógica para una buena experienci
     name: "Chess.github",
     date: "23/02/2023 09:10 a. m.",
     icon: "github",
-    url: "https://github.com/Nitsuga159/Chess-Java",
+    url: "https://github.com/nitsugaro/Chess-Java",
     color: "black",
     type: "anchor",
   },

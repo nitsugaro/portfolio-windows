@@ -2,15 +2,15 @@ import s from "./CurrentDate.module.css";
 import { useEffect, useState } from "react";
 
 const convertDate = (date) => {
-  date = date.toLocaleTimeString().substring(0, 5);
-  let [hours, minutes] = date.split(":").map((e) => +e);
-  let time = hours >= 12 ? "p. m." : "a. m.";
+  date = date.toLocaleTimeString()
+  const localDate = date.substring(0, 5);
+  let [hours, minutes] = localDate.split(":").map((e) => +e);
 
   hours = hours % 12 ? hours % 12 : 12;
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
 
-  return `${hours}:${minutes} ${time}`;
+  return `${hours}:${minutes} ${date.slice(-2, date.length)}`;
 };
 
 export default function CurrentDate() {

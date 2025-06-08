@@ -109,7 +109,7 @@ export default function LeftSideToolBar() {
         </div>
         <div
           className={s["item-container"]}
-          onClick={() => handleAnchor("https://github.com/Nitsuga159")}
+          onClick={() => handleAnchor("https://github.com/nitsugaro")}
         >
           <Svg className={s["item"]} icon="github" />
         </div>

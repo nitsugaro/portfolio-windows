@@ -14,7 +14,7 @@ const hangedGame = [
     icon: "github",
     type: "anchor",
     date: "03/10/2022 01:24 p. m.",
-    url: "https://github.com/Nitsuga159/Ahorcado-en-C",
+    url: "https://github.com/nitsugaro/Ahorcado-en-C",
   },
 ];
 
@@ -33,7 +33,7 @@ const ticTacToe = [
     type: "anchor",
     color: "black",
     date: "02/02/2022 11:45 a. m.",
-    url: "https://github.com/Nitsuga159/TicTacToe-C",
+    url: "https://github.com/nitsugaro/TicTacToe-C",
   },
 ];
 

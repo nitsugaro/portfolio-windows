@@ -39,7 +39,7 @@ Tech Stack: HTML, CSS, JavaScript, React-Redux, NodeJS, Express, Sequelize, Post
     name: "PokeAPI.github",
     date: "11/11/2022 10:32 a. m.",
     icon: "github",
-    url: "https://github.com/Nitsuga159/API-POKEMON",
+    url: "https://github.com/nitsugaro/API-POKEMON",
     color: "black",
     type: "anchor",
   },

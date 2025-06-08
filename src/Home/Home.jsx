@@ -35,14 +35,21 @@ export default function Home() {
 
   const handleFolders = useCallback(
     (position, name) => {
-      const newFoldersOrFiles = foldersOrFiles.map((item) => {
-        if (item.name != name) return item;
+      const itemIndex = foldersOrFiles.findIndex((item) => {
+        if (item.name != name) return false;
 
-        item.position = position;
-        return item;
+        return true;
       });
 
-      setFoldersOrFiles(newFoldersOrFiles);
+      setFoldersOrFiles(foldersOrFiles => {
+        const item = foldersOrFiles[itemIndex]
+        item.position = position;
+
+        foldersOrFiles.splice(itemIndex, 1)
+        foldersOrFiles.push(item)
+
+        return foldersOrFiles
+      });
     },
     [foldersOrFiles]
   );
